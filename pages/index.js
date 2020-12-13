@@ -68,7 +68,7 @@ export default function Home({ caseStudies = caseStudiesObject }) {
   return (
     <MainContent>
       <Head>
-        <title>Create Next App</title>
+        <title>365 Dana Branda</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

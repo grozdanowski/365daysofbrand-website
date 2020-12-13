@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <MainContent>
       <Head>
-        <title>Create Next App</title>
+        <title>Kontakt | 365 Dana Branda</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
