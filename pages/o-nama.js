@@ -1,3 +1,6 @@
+import Head from 'next/head'
+import MainContent from 'components/layout/mainContent'
+
 export default function AboutUs() {
 
   return (
