@@ -19,7 +19,7 @@ export default function SiteWrapper({ children }) {
   return (
     <div className={styles.siteWrapper}>
       <Header slideoutActive={slideMenuOpen} slideoutAnimate={slideMenuTriggerAnimate} triggerSlideoutMenu={() => handleTriggerChange(!slideMenuOpen)} />
-      <SlideoutMenu menuVisible={slideMenuOpen} slideoutAnimate={slideMenuTriggerAnimate} />
+      <SlideoutMenu menuVisible={slideMenuOpen} slideoutAnimate={slideMenuTriggerAnimate} closeSlideoutMenu={() => handleTriggerChange(false)} />
       {children}
       <Footer />
     </div>

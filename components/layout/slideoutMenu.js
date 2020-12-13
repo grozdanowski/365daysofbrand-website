@@ -17,7 +17,7 @@ const dropdownMenuItems = [
   },
 ]
 
-export default function SlideoutMenu({ menuVisible = false, slideoutAnimate = false, menuItems = dropdownMenuItems }) {
+export default function SlideoutMenu({ menuVisible = false, slideoutAnimate = false, menuItems = dropdownMenuItems, closeSlideoutMenu }) {
   
   return (
     <div
@@ -40,7 +40,7 @@ export default function SlideoutMenu({ menuVisible = false, slideoutAnimate = fa
         >
           {menuItems.map((item, index) => (
             <Link href={item.target}>
-              <a className={styles.menuItem}>
+              <a onClick={() => closeSlideoutMenu()} className={styles.menuItem}>
                 <span className={styles.menuItemLabel}>
                   {item.label}
                 </span>

@@ -113,24 +113,6 @@
       transform: rotate(-45deg);
       top: -10px;
     }
-
-    &:hover {
-
-      .buttonInnerContainer {
-        grid-gap: calcRem(6);
-      }
-  
-      .hamburgerLineOne {
-        transform: rotate(30deg);
-        top: 10px;
-      }
-  
-      .hamburgerLineThree {
-        width: 100%;
-        transform: rotate(-30deg);
-        top: -10px;
-      }
-    }
   }
 
   &.scrolled {
