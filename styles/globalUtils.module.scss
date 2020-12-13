@@ -1,0 +1,73 @@
+@import 'variables';
+@import 'functions';
+
+.container, .containerWide, .containerNarrow {
+  margin: 0 auto;
+  width: 100%;
+  padding-left: calcRem(20);
+  padding-right: calcRem(20);
+
+  &:before, &:after {
+    display: none;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    padding-left: calcRem(40);
+    padding-right: calcRem(40);
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    padding-left: calcRem(20);
+    padding-right: calcRem(20);
+  }
+}
+
+.container {
+  max-width: $container-width;
+}
+
+.containerWide {
+  max-width: $container-wide-width;
+}
+
+.containerNarrow {
+  max-width: $container-narrow-width;
+}
+
+.yellowDot {
+  color: $primary-color;
+}
+
+.yellowUnderline {
+  display: inline-block;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calcRem(-4);
+    height: calcRem(4);
+    content: '';
+    display: block;
+    background-color: $primary-color;
+  }
+}
+
+.buttonCtaPositive {
+  padding: calcRem(10) calcRem(30);
+  font-size: calcRem(22);
+  font-family: $font-serif;
+  background-color: $primary-color;
+  display: inline-block;
+  border: 2px solid $text-color;
+  transition: all 0.3s ease-in-out;
+  color: $text-color;
+
+  &:hover, &:focus {
+    background-color: $text-color;
+    color: $primary-color;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

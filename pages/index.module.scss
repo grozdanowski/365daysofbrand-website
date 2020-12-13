@@ -1,0 +1,459 @@
+@import 'styles/helpers';
+
+.indexHero {
+  display: grid;
+  grid-template-columns: (($container-wide-width - $container-width) / 2) calcRem(500) 1fr;
+
+  @media (max-width: $tablet-breakpoint) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    overflow: hidden;
+  }
+
+  .indexHeroContent {
+    display: flex;
+    align-items: center;
+    padding: calcRem(70) 0;
+
+    @media (max-width: $tablet-breakpoint) {
+      padding-bottom: calcRem(30);
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      padding-left: calcRem(20);
+      padding-right: calcRem(20);
+    }
+  }
+
+  .heroTitle {
+    font-family: $font-serif;
+    font-weight: normal;
+    font-size: calcRem(98);
+    line-height: 110%;
+    margin: 0;
+
+    @media (max-width: $tablet-breakpoint) {
+      font-size: calcRem(110);
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      font-size: calcRem(56);
+    }
+  }
+
+  .heroSubtitle {
+    display: block;
+    margin: calcRem(30) 0 0;
+    font-weight: 800;
+    font-size: calcRem(32);
+
+    @media (max-width: $mobile-breakpoint) {
+      font-size: calcRem(24);
+    }
+  }
+
+  .indexHeroDecoration {
+
+    img {
+      width: 120%;
+      max-width: unset;
+
+      @media (max-width: $tablet-breakpoint) {
+        width: 100%;
+      }
+
+      @media (max-width: $mobile-breakpoint) {
+        width: 160%;
+        margin-left: -30%;
+      }
+    }
+  }
+}
+
+.indexYellowIntro {
+  background-color: $primary-color;
+  padding: calcRem(110) 0;
+
+  .introContainer {
+    display: grid;
+    grid-gap: calcRem(80);
+    grid-template-columns: calcRem(500) 1fr;
+    align-items: center;
+
+    @media (max-width: $tablet-breakpoint) {
+      grid-template-columns: 1fr;
+      max-width: calcRem(640);
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      margin-left: calcRem(20);
+      margin-right: calcRem(20);
+      width: auto;
+    }
+  }
+
+  .accentedContent {
+    order: 2;
+    padding-left: calcRem(80);
+    padding-top: calcRem(10);
+    padding-bottom: calcRem(10);
+    border-left: 2px solid $text-color;
+
+    @media (max-width: $tablet-breakpoint) {
+      order: 1;
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      padding-left: calcRem(40);
+    }
+
+    .introTitle {
+      font-family: $font-serif;
+      font-weight: normal;
+      font-size: calcRem(64);
+      line-height: 120%;
+      margin: 0;
+
+      @media (max-width: $mobile-breakpoint) {
+        font-size: calcRem(48);
+      }
+    }
+
+    .introSubtitle {
+      display: block;
+      margin: calcRem(20) 0 0;
+      font-weight: 800;
+      font-size: calcRem(18);
+    }
+  }
+
+  .introContent {
+    order: 1;
+    text-align: right;
+    font-size: calcRem(18);
+    line-height: 180%;
+
+    @media (max-width: $tablet-breakpoint) {
+      order: 2;
+      text-align: left;
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      font-size: calcRem(16);
+      text-align: justify;
+    }
+  }
+}
+
+.indexFocusSection {
+  max-width: calcRem(1500);
+  overflow: hidden;
+  padding-top: calcRem(100);
+
+  .focusGraphic {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    top: calcRem(40);
+    margin-top: calcRem(-80);
+
+    @media (max-width: $mobile-breakpoint) {
+      margin-top: calcRem(-80);
+      width: 300%;
+      margin-left: -45%;
+      max-width: unset;
+    }
+  }
+
+  .focusContent {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: calcRem(1000);
+
+    .focusTitle {
+      font-family: $font-serif;
+      font-weight: normal;
+      font-size: calcRem(98);
+      line-height: 110%;
+      margin: 0;
+
+      @media (max-width: $mobile-breakpoint) {
+        font-size: calcRem(72);
+      }
+    }
+
+    .focusSubtitle {
+      display: block;
+      margin: calcRem(30) 0 calcRem(30);
+      font-weight: 800;
+      font-size: calcRem(32);
+
+      @media (max-width: $mobile-breakpoint) {
+        font-size: calcRem(20);
+      }
+    }
+
+    p {
+      font-size: calcRem(18);
+
+      @media (max-width: $mobile-breakpoint) {
+        font-size: calcRem(16);
+      }
+    }
+
+    .focusCtaWrapper {
+      margin-top: calcRem(40);
+    }
+  }
+}
+
+.caseStudiesWrapper {
+  background-color: $text-color;
+  padding: calcRem(80) 0;
+  overflow-x: hidden;
+
+  .caseStudies {
+    padding: 0;
+  }
+
+  .caseStudy {
+    list-style-type: none;
+    display: grid;
+    grid-gap: calcRem(50);
+    width: 100%;
+    padding-top: calcRem(40);
+    padding-bottom: calcRem(40);
+    color: #fff;
+    align-items: center;
+
+    &:nth-child(odd) {
+      grid-template-columns: 1fr calcRem(430) calcRem(40);
+
+      .caseImages {
+        order: 1;
+      }
+
+      .studyContent {
+        order: 2;
+      }
+
+      .spacer {
+        order: 3;
+      }
+    }
+    
+    &:nth-child(even) {
+      grid-template-columns: calcRem(40) calcRem(430) 1fr;
+
+      .caseImages {
+        order: 3;
+      }
+
+      .studyContent {
+        order: 2;
+      }
+
+      .spacer {
+        order: 1;
+      }
+    }
+
+    @media (max-width: $tablet-breakpoint) {
+      
+      &:nth-child(odd), &:nth-child(even) {
+        grid-template-columns: 1fr;
+        padding-left: calcRem(60);
+        padding-right: calcRem(60);
+
+        .caseImages {
+          order: 1;
+        }
+  
+        .studyContent {
+          order: 2;
+        }
+  
+        .spacer {
+          order: 3;
+        }
+      }
+
+      .studyContent {
+        max-width: calcRem(420);
+        margin: 0 auto;
+      }
+    }
+
+    .studyContent {
+
+      .studyTitle {
+        font-family: $font-serif;
+        font-weight: normal;
+        font-size: calcRem(64);
+        line-height: 110%;
+        margin: 0;
+
+        @media (max-width: $mobile-breakpoint) {
+          font-size: calcRem(48);
+        }
+      }
+
+      .studySeparatorUnderTitle {
+        display: block;
+        width: calcRem(160);
+        height: calcRem(8);
+        margin: calcRem(20) 0;
+      }
+
+      .studySubtitle {
+        display: block;
+        margin: calcRem(30) 0 calcRem(30);
+        font-weight: 800;
+        font-size: calcRem(18);
+      }
+
+      .studyTextContent {
+        font-size: calcRem(14);
+        line-height: 180%;
+      }
+
+      .studyTags {
+        display: block;
+        padding: 0;
+        line-height: 100%;
+        margin: calcRem(40) 0 0;
+        
+        .studyTag {
+          font-size: calcRem(14);
+          display: inline-block;
+          padding-right: calcRem(10);
+          margin-right: calcRem(10);
+          border-right: 2px solid #fff;
+          margin-top: calcRem(10);
+          margin-bottom: calcRem(10);
+          font-weight: bold;
+
+          &:last-child {
+            padding-right: 0;
+            margin-right: 0;
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.indexTestimonial {
+  padding: calcRem(20) calcRem(30);
+  position: relative;
+
+  &:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    background-color: $text-color;
+    z-index: 1;
+  }
+
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $primary-color;
+    z-index: 2;
+  }
+
+  .indexTestimonialCard {
+    position: relative;
+    z-index: 3;
+    margin: 0 auto;
+    width: 100%;
+    max-width: calcRem(960);
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: calcRem(200) 1fr;
+    box-shadow: 0 2px 24px 0 rgba(0,0,0,0.50);
+
+    @media (max-width: $mobile-breakpoint) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .testimonialGraphic {
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (max-width: $mobile-breakpoint) {
+      order: 2;
+      height: calcRem(280);
+      margin-top: calcRem(-50);
+    }
+  }
+
+  .testimonialInner {
+    padding: calcRem(40);
+
+    @media (max-width: $mobile-breakpoint) {
+      order: 1;
+    }
+
+    p {
+      font-size: calcRem(18);
+      font-style: italic;
+      line-height: 170%;
+    }
+
+    .testimonialAuthor {
+      display: block;
+      text-align: right;
+      font-weight: bold;
+    }
+  }
+}
+
+.contactCall {
+  background-color: $primary-color;
+  padding: calcRem(100) calcRem(40);
+
+  .contactCallContainer {
+    max-width: calcRem(920);
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .contactCallTitle {
+    font-family: $font-serif;
+    font-weight: normal;
+    font-size: calcRem(98);
+    line-height: 110%;
+    margin: 0;
+
+    @media (max-width: $mobile-breakpoint) {
+      font-size: calcRem(64);
+    }
+  }
+
+  .contactCtaWrapper {
+    margin: calcRem(60) 0;
+  }
+
+  p {
+    
+    a {
+      color: $text-color;
+      font-weight: bold;
+    }
+  }
+}

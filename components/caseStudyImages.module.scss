@@ -1,0 +1,71 @@
+@import 'styles/helpers';
+
+.studyImages {
+  padding: calcRem(140);
+  position: relative;
+
+  @media (max-width: $mobile-breakpoint) {
+    padding: 0;
+    margin-top: calcRem(60);
+    margin-bottom: calcRem(100);
+  }
+
+  .singleImage {
+    list-style-type: none;
+    position: relative;
+    position: absolute;
+    top: calcRem(140);
+    left: calcRem(140);
+    right: calcRem(140);
+    bottom: calcRem(140);
+    border: calcRem(8) solid #fff;
+    box-shadow: 0 2px 24px 0 rgba(0,0,0,0.50);
+    transition: all 0.4s ease-in-out;
+    transition-delay: 0.2s;
+
+    @media (max-width: $mobile-breakpoint) {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &:first-child {
+      position: relative;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+    }
+  }
+
+  &.inView {
+    
+    .singleImage {
+  
+      &:nth-child(2) {
+        transform: rotate(10deg) translateX(calcRem(80)) translateY(calcRem(-120));
+        z-index: 9;
+
+        @media (max-width: $mobile-breakpoint) {
+          transform: rotate(10deg) translateX(calcRem(40)) translateY(calcRem(-80));
+        }
+      }
+  
+      &:nth-child(3) {
+        transform: rotate(-10deg) translateX(calcRem(-80)) translateY(calcRem(120));
+        z-index: 8;
+
+        @media (max-width: $mobile-breakpoint) {
+          transform: rotate(-10deg) translateX(calcRem(-40)) translateY(calcRem(80));
+        }
+      }
+    }
+  }
+}

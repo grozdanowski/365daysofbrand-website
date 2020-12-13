@@ -1,0 +1,19 @@
+@import './functions';
+
+$base-font-size: 16px;
+$container-width: calcRem(1200);
+$container-narrow-width: calcRem(960);
+$container-wide-width: calcRem(1300);
+$narrow-content-width: calcRem(620);
+
+$primary-color: #F6DC1E;
+$text-color: #000;
+$light-text-color: #444;
+$light-border-color: #D8D8D8;
+$body-background-color: #FAFAFA;
+
+$font-serif: 'Abril Fatface', cursive;
+$font-sans: 'Montserrat', sans-serif;
+
+$tablet-breakpoint: 1100px;
+$mobile-breakpoint: 600px;
